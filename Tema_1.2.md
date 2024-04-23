@@ -71,12 +71,12 @@
 ### Связать локальный репозиторий с удаленным.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/graph.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/url.png)
 
 ### Загрузить изменения на удаленный репозиторий.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/graph.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
 
 
 ## Самостоятельная работа №7
