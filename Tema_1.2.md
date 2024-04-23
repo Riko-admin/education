@@ -44,7 +44,7 @@
 ### Перейти в папку проекта.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Переходвпапкупроекта.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/pic/Переход в папку проекта.png)
 
 ### Выполнить команду Git init.
 
