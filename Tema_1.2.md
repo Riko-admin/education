@@ -77,13 +77,13 @@
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/pul.png)
 ### Добавить изменения в стэш.
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/stash.png)
 ### Добавить название стэш.
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/stash-name.png)
 ### Выполнить возврат к сохраненным изменениям.
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/apply.png)
 ## Самостоятельная работа №7
 - Текст задания
 - Оформленный код
