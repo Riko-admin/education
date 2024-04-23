@@ -30,7 +30,7 @@
 ### Установка.
 
 ### Результат.
-![Меню](https://github.com/vnika2003/Software_Engineering/blob/Тема_2/pic/Lab2_1.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Установка.png)
   
 ## Самостоятельная работа №2
 - Текст задания
