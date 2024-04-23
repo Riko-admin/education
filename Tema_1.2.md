@@ -62,7 +62,7 @@
 ### Проверить статус.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/add.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/status.png)
  
 ## Самостоятельная работа №5
 - Текст задания
