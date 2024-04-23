@@ -36,7 +36,7 @@
 ### Настройка Git.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Настройка.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Настройка1.png)
   
 ## Самостоятельная работа №3
 - Текст задания
