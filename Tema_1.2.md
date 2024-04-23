@@ -65,20 +65,25 @@
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/graph.png)
 ## Самостоятельная работа №6
-
 ### Подключение к удаленному репозиторию.
-
 ### Связать локальный репозиторий с удаленным.
-
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/URL.png)
-
 ### Загрузить изменения на удаленный репозиторий.
-
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
-
-
+### Извлечь изменения с помощью git pull
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/pul.png)
+### Добавить изменения в стэш.
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
+### Добавить название стэш.
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
+### Выполнить возврат к сохраненным изменениям.
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
 ## Самостоятельная работа №7
 - Текст задания
 - Оформленный код
