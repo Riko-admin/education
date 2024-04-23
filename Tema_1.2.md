@@ -54,16 +54,16 @@
 ### Фиксация изменений.
 ### Сделать первый коммит.
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/status.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/commit.png)
 ### Вывести список коммитов.
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/status.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/log.png)
 ### Кратко вывести список коммитов 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/status.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/output.png)
 ### Вывести список коммитов в графическом представлении
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/status.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/graph.png)
 ## Самостоятельная работа №6
 - Текст задания
 - Оформленный код
