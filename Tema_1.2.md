@@ -33,7 +33,7 @@
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Установка.png)
   
 ## Самостоятельная работа №2
-### Установить имя пользователя и адрес электронной почты.
+### Установить имя пользователя и адрес электронной почты. Проверить выполнение команды
 
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Настройка1.png)
@@ -44,12 +44,12 @@
 ### Перейти в папку проекта.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Настройка1.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Переходвпапкупроекта.png)
 
 ### Выполнить команду Git init.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Настройка1.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/РезультатвыполненияGitinit.png)
   
 ## Самостоятельная работа №4
 - Текст задания
