@@ -44,12 +44,12 @@
 ### Перейти в папку проекта.
 
 ### Результат.
-![Меню]([https://github.com/Riko-admin/education/blob/Тема_1.2/pic/pic/Переход в папку проекта.png](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Переход%20в%20папку%20проекта.png))
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/Переход.png)
 
 ### Выполнить команду Git init.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/РезультатвыполненияGitinit.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/init.png)
   
 ## Самостоятельная работа №4
 - Текст задания
