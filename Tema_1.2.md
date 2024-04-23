@@ -71,7 +71,7 @@
 ### Связать локальный репозиторий с удаленным.
 
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/url.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/URL.png)
 
 ### Загрузить изменения на удаленный репозиторий.
 
