@@ -74,7 +74,7 @@
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/create.png)
 ### Извлечь изменения с помощью git pull
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/pul.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/pull.png)
 ### Добавить изменения в стэш.
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/stash.png)
