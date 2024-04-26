@@ -88,11 +88,16 @@
 ### Ветвление.
 ### Создать новую ветку.
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/apply.png)
-- Оформленный код
-- Скрины консоли
-- Развернутый вывод
-  
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/1.png)
+### Переключиться на новую ветку
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/5.png)  
+### Слиять с помощью команды merge
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/3.png)  
+### Слиять с помощью команды rebase
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/4.png) 
 ## Самостоятельная работа №8
 - Текст задания
 - Оформленный код
