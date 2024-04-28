@@ -109,11 +109,21 @@
 ### Удалить файл из индекса
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/8.png)
+### Удалить локальную ветку
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/9.png)
+### Удалить удаленную ветку
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/10.png)
 ## Самостоятельная работа №10
-- Текст задания
-- Оформленный код
-- Скрины консоли
-- Развернутый вывод
-
+### Использовать команду git log
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/11.png)
+### Использовать команду git diff
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/12.png)
+### Посомтреть изменения между двумя коммитами
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/13.png)
 ## Общие выводы по теме
 - Развернутый вывод
