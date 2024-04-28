@@ -126,8 +126,22 @@
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/13.png)
 ## Самостоятельная работа №11
-### Использовать команду git log
+### Вернуть файл к предыдущему состоянию
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/11.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/14.png)
+### Зафиксировать измененный файл коммитом
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/15.png)
+## Самостоятельная работа №12
+### Возвращение к предыдущему коммиту
+### Сброс до предыдущего коммита с потерей изменений
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/16.png)
+### Сброс до предыдущего коммита с сохранением изменений
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/17.png)
+### Сброс до конкретного коммита 
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/18.png)
 ## Общие выводы по теме
 - Развернутый вывод
