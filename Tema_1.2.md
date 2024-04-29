@@ -175,5 +175,7 @@
 ### Удалить файл test.txt 
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/29.png)
+### Файл test.txt не виден в нашем репозитории
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/30.png)
 ## Общие выводы по теме
 - Развернутый вывод
