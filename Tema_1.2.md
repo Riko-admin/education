@@ -159,13 +159,13 @@
 ### Запустить команду слияния
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/24.png)
-### Открыть файл с конфликтами
-### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/25.png)
 ### Добавить измененные файлы
 ### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/25.png)
+### Завершить слияние
+### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/26.png)
-### Завершить сляиние
+### Удалить сливаемую ветку
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/27.png)
 ## Общие выводы по теме
