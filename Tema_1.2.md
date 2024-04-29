@@ -150,9 +150,9 @@
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/19.png)
 ### Исправить более ранний коммит
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/20.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/21.png)
 ### Сделать коммит и продолжить rebase
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/21.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/22.png)
 ## Общие выводы по теме
 - Развернутый вывод
