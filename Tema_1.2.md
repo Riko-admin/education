@@ -147,12 +147,26 @@
 ### Исправление коммита
 ### Исправить последний коммит
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/19.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/23.png)
 ### Исправить более ранний коммит
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/21.png)
 ### Сделать коммит и продолжить rebase
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/22.png)
+## Самостоятельная работа №14
+### Разрешение конфликтов при слиянии
+### Запустить команду слияния
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/24.png)
+### Открыть файл с конфликтами
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/25.png)
+### Добавить измененные файлы
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/26.png)
+### Завершить сляиние
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/27.png)
 ## Общие выводы по теме
 - Развернутый вывод
