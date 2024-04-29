@@ -143,5 +143,16 @@
 ### Сброс до конкретного коммита 
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/18.png)
+## Самостоятельная работа №13
+### Исправление коммита
+### Исправить последний коммит
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/19.png)
+### Исправить более ранний коммит
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/20.png)
+### Сделать коммит и продолжить rebase
+### Результат.
+![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/21.png)
 ## Общие выводы по теме
 - Развернутый вывод
