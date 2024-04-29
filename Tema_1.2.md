@@ -169,10 +169,10 @@
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/27.png)
 ## Самостоятельная работа №15
-### Создать файл gitignore и добавить запись
+### Создать файл gitignore и добавить запись на исключение файл test.txt
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/28.png)
-### Добавить файл с паролями и создать для него исключение
+### Удалить файл test.txt 
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_1.2/pic/29.png)
 ## Общие выводы по теме
