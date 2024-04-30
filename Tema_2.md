@@ -58,6 +58,7 @@ except ValueError:print("Это не число.")
 ```
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_2/pic/3.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_2/pic/4.png)
 - Развернутый вывод
   
 ## Самостоятельная работа №4
