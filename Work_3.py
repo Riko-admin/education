@@ -1,5 +1,2 @@
-try:
-    num = int(input("Введите число: "))
-    print("Все верно. Число:", num)
-except ValueError:
-    print("Это не число.")
+try:num = int(input("Введите число: "))
+except ValueError:print("Это не число.")
