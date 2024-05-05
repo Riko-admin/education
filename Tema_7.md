@@ -1,5 +1,5 @@
-# Тема 6. Базовые коллекции: словари, кортежи
-Отчет по Теме #6 выполнил(а):
+# Тема 7. Работа с файлами (ввод, вывод)
+Отчет по Теме #7 выполнил(а):
 - Соломин Владислав Алексеевич
 - ИНО ОЗБ ПОАС 22-1
 
@@ -17,119 +17,135 @@
 - к.э.н., доцент Панов М.А.
 
 ## Самостоятельная работа №1
-### При создании сайта у вас возникла потребность обрабатывать данные пользователя в странной форме, а потом переводить их в нужные вам форматы. Вы хотите принимать от пользователя последовательность чисел, разделенных пробелом, а после переформатировать эти данные в список и кортеж. Реализуйте вашу задумку. Для получения начальных данных используйте input(). Результатом программы будет выведенный список и кортеж из начальных данных.
+### Найдите в интернете любую статью (объем статьи не менее 200 слов), скопируйте ее содержимое в файл и напишите программу, которая считает количество слов в текстовом файле и определит самое часто встречающееся слово. Результатом выполнения задачи будет: скриншот файла со статьей, листинг кода, и вывод в консоль, в котором будет указана вся необходимая информация
 ```python
-user_input = input("Введите числа, разделенные пробелом: ")
-number_list = user_input.split()
-number_tuple = tuple(number_list)
-print("Список:", number_list)
-print("Кортеж:", number_tuple)
+def analyze_text_file(filename):
+    with open(filename, 'r', encoding='utf-8') as file:
+        text = file.read().lower()
+        words = text.split()
+        word_counts = {}
+        for word in words:
+            word_counts[word] = word_counts.get(word, 0) + 1
+        most_frequent_word = max(word_counts, key=word_counts.get)
+        word_count = len(words)
+    print(f"Количество слов в файле: {word_count}")
+    print(f"Самое часто встречающееся слово: '{most_frequent_word}' ({word_counts[most_frequent_word]} раз)")
+analyze_text_file("text.txt")
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_6/pic/1.png)
-  
+![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/1.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/2.png)
 ## Самостоятельная работа №2
-### Николай знает, что кортежи являются неизменяемыми, но он очень упрямый и всегда хочет доказать, что он прав. Студент решил создать функцию, которая будет удалять первое появление определенного элемента из кортежа по значению и возвращать кортеж без него. Попробуйте повторить шедевр не признающего авторитеты начинающего программиста. Но учтите, что Николай не всегда уверен в наличии элемента в кортеже (в этом случае кортеж вернется функцией в исходном виде).
-### Входные данные:
-### (1, 2, 3), 1)
-### (1, 2, 3, 1, 2, 3, 4, 5, 2, 3, 4, 2, 4, 2), 3)
-### (2, 4, 6, 6, 4, 2), 9)
-### Ожидаемый результат:
-### (2, 3)
-### (1, 2, 1, 2, 3, 4, 5, 2, 3, 4, 2, 4, 2)
-### (2, 4, 6, 6, 4, 2)
+### У вас появилась потребность в ведении книги расходов, посмотрев все существующие варианты вы пришли к выводу что вас ничего не устраивает и нужно все делать самому. Напишите программу для учета расходов. Программа должна позволять вводить информацию о расходах, сохранять ее в файл и выводить существующие данные в консоль. Ввод информации происходит через консоль. Результатом выполнения задачи будет: скриншот файла с учетом расходов, листинг кода, и вывод в консоль, с демонстрацией работоспособности программы.
 ```python
-def remove_first_occurrence(tup, value):
-    if value in tup:
-        index = tup.index(value)
-        return tup[:index] + tup[index+1:]
-    return tup
-print(remove_first_occurrence((1, 2, 3), 1))
-print(remove_first_occurrence((1, 2, 3, 1, 2, 3, 4, 5, 2, 3, 4, 2, 4, 2), 3))
-print(remove_first_occurrence((2, 4, 6, 6, 4, 2), 9))
+def add_expense():
+  date = input("Введите дату (YYYY-MM-DD): ")
+  category = input("Введите категорию: ")
+  amount = float(input("Введите сумму: "))
+  with open("expenses.txt", "a", encoding='utf-8') as file:
+    file.write(f"{date},{category},{amount}\n")
+  print("Расход добавлен.")
+
+def view_expenses():
+  """Выводит список расходов из файла."""
+  print("Дата\t\tКатегория\tСумма")
+  with open("expenses.txt", "r", encoding='utf-8') as file:
+    for line in file:
+      date, category, amount = line.strip().split(",")
+      print(f"{date}\t{category}\t\t{amount}")
+while True:
+  action = input("Выберите действие (1-добавить/2-посмотреть/3-выход): ")
+  if action.lower() == "1":
+    add_expense()
+  elif action.lower() == "2":
+    view_expenses()
+  elif action.lower() == "3":
+    break
+  else:
+    print("Неизвестное действие.")
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_6/pic/2.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/3.png)
 
 ## Самостоятельная работа №3
-### Ребята поспорили кто из них одним нажатием на numpad наберет больше повторяющихся цифр, но не понимают, как узнать победителя. Вам им нужно в этом помочь. Дана строка в виде случайной последовательности чисел от 0 до 9 (длина строки минимум 15 символов). Требуется создать словарь, который в качестве ключей будет принимать данные числа (т. е. ключи будут типом int), а в качестве значений – количество этих чисел в имеющейся последовательности. Для построения словаря создайте Михаил А. Панов функцию, принимающую строку из цифр. Функция должна возвратить словарь из 3-х самых часто встречаемых чисел, также эти значения нужно вывести в порядке возрастания ключа.
+### Имеется файл input.txt с текстом на латинице. Напишите программу, которая выводит следующую статистику по тексту: количество букв латинского алфавита; число слов; число строк.
+### Текст в файле:
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+### Ожидаемый результат:
+Input file contains:
+108 letters
+20 words
+4 lines
 ```python
-def most_frequent_digits(input_string):
-    digit_count = {}
-    for char in input_string:
-        digit = int(char)
-        if digit in digit_count:
-            digit_count[digit] += 1
-        else:
-            digit_count[digit] = 1
-    top_three_digits = sorted(digit_count.items(), key=lambda item: (-item[1], item[0]))[:3]
-    result = {key: value for key, value in sorted(top_three_digits)}
-    return result
-input_string = "11122333345566778899"
-output = most_frequent_digits(input_string)
-print(output)
+def analyze_text(filename):
+    letters = 0
+    words = 0
+    lines_count = 0
+    with open(filename, 'r') as file:
+        for line in file:
+            lines_count += 1
+            words += len(line.split())
+            letters += sum(1 for char in line if char.isalpha())
+    print(f"Input file contains:")
+    print(f"{letters} letters")
+    print(f"{words} words")
+    print(f"{lines_count} lines")
+if __name__ == "__main__":
+    analyze_text('input.txt')
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_6/pic/3.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/4.png)
 
 ## Самостоятельная работа №4
-### Ваш хороший друг владеет офисом со входом по электронным картам, ему нужно чтобы вы написали программу, которая показывала в каком порядке сотрудники входили и выходили из офиса. Определение сотрудника происходит по id. Напишите функцию, которая на вход принимает кортеж и случайный элемент (id), его можно придумать самостоятельно. Требуется вернуть новый кортеж, начинающийся с первого появления элемента в нем и заканчивающийся вторым его появлением включительно. Если элемента нет вовсе – вернуть пустой кортеж. Если элемент встречается только один раз, то вернуть кортеж, который начинается с него и идет до конца исходного.
-### Входные данные:
-### (1, 2, 3), 8)
-### (1, 8, 3, 4, 8, 8, 9, 2), 8)
-### (1, 2, 8, 5, 1, 2, 9), 8)
+### Напишите программу, которая получает на вход предложение, выводит его в терминал, заменяя все запрещенные слова звездочками * (количество звездочек равно количеству букв в слове). Запрещенные слова, разделенные символом пробела, хранятся в текстовом файле input.txt. Все слова в этом файле записаны в нижнем регистре. Программа должна заменить запрещенные слова, где бы они ни встречались, даже в середине другого слова. Замена производится независимо от регистра: если файл input.txt содержит запрещенное слово exam, то слова exam, Exam, ExaM, EXAM и exAm должны быть заменены на ****.
+### Запрещенные слова:
+hello email python the exam wor is
+### Предложение для проверки:
+Hello, world! Python IS the programming language of thE future. My EMAIL is.... PYTHON is awesome!!!!
 ### Ожидаемый результат:
-### ()
-### (8, 3, 4, 8)
-### (8, 5, 1, 2, 9)
+*****, ***ld! ****** ** *** programming language of *** future. My
+***** **....
+****** ** awesome!!!!
 ```python
-def find_id_sequence(entries, search_id):
-    try:
-        first_index = entries.index(search_id)
-    except ValueError:
-        return ()
-    try:
-        second_index = entries.index(search_id, first_index + 1)
-        return entries[first_index:second_index + 1]
-    except ValueError:
-        return entries[first_index:]
-print(find_id_sequence((1, 2, 3), 8))  # ()
-print(find_id_sequence((1, 8, 3, 4, 8, 8, 9, 2), 8))  # (8, 3, 4, 8)
-print(find_id_sequence((1, 2, 8, 5, 1, 2, 9), 8))  # (8, 5, 1, 2, 9)
+
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_6/pic/4.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/5.png)
 
 ## Самостоятельная работа №5
-### Самостоятельно придумайте и решите задачу, в которой будут обязательно использоваться кортеж или список. Проведите минимум три теста для проверки работоспособности вашей задачи.
-### Написать программу, которая принимает список кортежей с данными о погоде (дата, температура, осадки) и выводит:
-- Среднюю температуру за период.
-- Дату с самой высокой температурой.
-- Количество дней с осадками. 
+### Самостоятельно придумайте и решите задачу, которая будет взаимодействовать с текстовым файлом.
+### Написать программу ежедневник, которая:
+- Запишет задачу.
+- Укажет дату выполнения задачи.
+- Даст возможность просматривать задачи.
+- Будет иметь возможность выйти.
 ```python
-def analyze_weather_data(weather_data):
-  total_temp = 0
-  max_temp_date = None
-  max_temp = float('-inf')
-  rainy_days = 0
-  for date, temp, precipitation in weather_data:
-    total_temp += temp
-    if temp > max_temp:
-      max_temp = temp
-      max_temp_date = date
-    if precipitation:
-      rainy_days += 1
-  average_temp = total_temp / len(weather_data)
-  print(f"Средняя температура: {average_temp:.1f}")
-  print(f"Дата с самой высокой температурой: {max_temp_date}")
-  print(f"Количество дней с осадками: {rainy_days}")
-test_data = [
-  ("2023-11-01", 20, False),
-  ("2023-11-02", 25, True),
-  ("2023-11-03", 18, False),
-  ("2023-11-04", 22, True),
-]
-analyze_weather_data(test_data)
+def add_expense():
+  date = input("Введите дату выполнения задачи (YYYY-MM-DD): ")
+  category = input("Введите тему задачи: ")
+  description = input("Введите описание задачи: ")
+  with open("diary.txt", "a", encoding='utf-8') as file:
+    file.write(f"{date},{category},{description}\n")
+  print("Задача добавлена.")
+def view_expenses():
+  print("Дата\t\tТема\tОписание")
+  with open("diary.txt", "r", encoding='utf-8') as file:
+    for line in file:
+      date, category, description = line.strip().split(",")
+      print(f"{date}\t{category}\t\t{description}")
+while True:
+  action = input("Выберите действие (1-добавить/2-посмотреть/3-выход): ")
+  if action.lower() == "1":
+    add_expense()
+  elif action.lower() == "2":
+    view_expenses()
+  elif action.lower() == "3":
+    break
+  else:
+    print("Неизвестное действие.")
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_6/pic/5.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/6.png)
