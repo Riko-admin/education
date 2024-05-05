@@ -1,0 +1,5 @@
+user_input = input("Введите числа, разделенные пробелом: ")
+number_list = user_input.split()
+number_tuple = tuple(number_list)
+print("Список:", number_list)
+print("Кортеж:", number_tuple)
