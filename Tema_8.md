@@ -1,5 +1,5 @@
-# Тема 7. Работа с файлами (ввод, вывод)
-Отчет по Теме #7 выполнил(а):
+# Тема 8. Введение в ООП
+Отчет по Теме #8 выполнил(а):
 - Соломин Владислав Алексеевич
 - ИНО ОЗБ ПОАС 22-1
 
@@ -17,55 +17,37 @@
 - к.э.н., доцент Панов М.А.
 
 ## Самостоятельная работа №1
-### Найдите в интернете любую статью (объем статьи не менее 200 слов), скопируйте ее содержимое в файл и напишите программу, которая считает количество слов в текстовом файле и определит самое часто встречающееся слово. Результатом выполнения задачи будет: скриншот файла со статьей, листинг кода, и вывод в консоль, в котором будет указана вся необходимая информация
+### Самостоятельно создайте класс и его объект. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 ```python
-def analyze_text_file(filename):
-    with open(filename, 'r', encoding='utf-8') as file:
-        text = file.read().lower()
-        words = text.split()
-        word_counts = {}
-        for word in words:
-            word_counts[word] = word_counts.get(word, 0) + 1
-        most_frequent_word = max(word_counts, key=word_counts.get)
-        word_count = len(words)
-    print(f"Количество слов в файле: {word_count}")
-    print(f"Самое часто встречающееся слово: '{most_frequent_word}' ({word_counts[most_frequent_word]} раз)")
-analyze_text_file("text.txt")
+class Book:
+  def __init__(self, title, author, pages):
+    self.title = title
+    self.author = author
+    self.pages = pages
+book = Book("The Lord of the Rings", "J.R.R. Tolkien", 1207)
+print(book.title)
+print(book.author)
+print(book.pages)
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/1.png)
-![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/2.png)
-## Самостоятельная работа №2
-### У вас появилась потребность в ведении книги расходов, посмотрев все существующие варианты вы пришли к выводу что вас ничего не устраивает и нужно все делать самому. Напишите программу для учета расходов. Программа должна позволять вводить информацию о расходах, сохранять ее в файл и выводить существующие данные в консоль. Ввод информации происходит через консоль. Результатом выполнения задачи будет: скриншот файла с учетом расходов, листинг кода, и вывод в консоль, с демонстрацией работоспособности программы.
-```python
-def add_expense():
-  date = input("Введите дату (YYYY-MM-DD): ")
-  category = input("Введите категорию: ")
-  amount = float(input("Введите сумму: "))
-  with open("expenses.txt", "a", encoding='utf-8') as file:
-    file.write(f"{date},{category},{amount}\n")
-  print("Расход добавлен.")
+![Меню](https://github.com/Riko-admin/education/blob/Тема_8/pic/1.png)
 
-def view_expenses():
-  """Выводит список расходов из файла."""
-  print("Дата\t\tКатегория\tСумма")
-  with open("expenses.txt", "r", encoding='utf-8') as file:
-    for line in file:
-      date, category, amount = line.strip().split(",")
-      print(f"{date}\t{category}\t\t{amount}")
-while True:
-  action = input("Выберите действие (1-добавить/2-посмотреть/3-выход): ")
-  if action.lower() == "1":
-    add_expense()
-  elif action.lower() == "2":
-    view_expenses()
-  elif action.lower() == "3":
-    break
-  else:
-    print("Неизвестное действие.")
+## Самостоятельная работа №2
+### Самостоятельно создайте атрибуты и методы для ранее созданного класса. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
+```python
+class Book():
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+    def getFullName(self): return f"{self.title} {self.author}"
+    def toString(self): return f"Title ={self.title} Author={self.author} Pages={self.pages}"
+book = Book("The Lord of the Rings", "J.R.R. Tolkien", 1207)
+print(book.getFullName())
+print(book.toString())
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_7/pic/3.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_8/pic/2.png)
 
 ## Самостоятельная работа №3
 ### Имеется файл input.txt с текстом на латинице. Напишите программу, которая выводит следующую статистику по тексту: количество букв латинского алфавита; число слов; число строк.
