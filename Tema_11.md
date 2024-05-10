@@ -44,3 +44,4 @@ list(fib_generator)
 ```
 ### Результат.
 ![Меню](https://github.com/Riko-admin/education/blob/Тема_11/pic/2.png)
+
