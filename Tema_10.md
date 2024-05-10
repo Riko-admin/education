@@ -1,5 +1,5 @@
-# Тема 8. Введение в ООП
-Отчет по Теме #8 выполнил(а):
+# Тема 10. Введение в ООП
+Отчет по Теме #10 выполнил(а):
 - Соломин Владислав Алексеевич
 - ИНО ОЗБ ПОАС 22-1
 
@@ -17,130 +17,121 @@
 - к.э.н., доцент Панов М.А.
 
 ## Самостоятельная работа №1
-### Самостоятельно создайте класс и его объект. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
+### Вовочка решил заняться спортивным программированием на python, но для этого он должен знать за какое время выполняется его программа. Он решил, что для этого ему идеально подойдет декоратор для функции, который будет выяснять за какое время выполняется та или иная функция. Помогите Вовочке в его начинаниях и напишите такой декоратор. Подсказка: необходимо использовать модуль time Декоратор необходимо использовать для этой функции:
+![Меню](https://github.com/Riko-admin/education/blob/Тема_10/pic/1.png)
+### Результатом вашей работы будет листинг кода и скриншот консоли, в котором будет выполненная функция Фибоначчи и время выполнения программы. Также на этом примере можете посмотреть, что решение задач через рекурсию не всегда является хорошей идеей. Поскольку решение Фибоначчи для 100 с использованием рекурсии и без динамического программирования решается более десяти секунд, а решение точно такой же задачи, но через цикл for еще и для 200, занимает меньше 1 секунды.
 ```python
-class Book:
-  def __init__(self, title, author, pages):
-    self.title = title
-    self.author = author
-    self.pages = pages
-book = Book("The Lord of the Rings", "J.R.R. Tolkien", 1207)
-print(book.title)
-print(book.author)
-print(book.pages)
+import time
+def timer(func):
+    def wrapper():
+        start_time =time.time();
+        func()
+        print()
+        print(f"Затраченное время = {time.time()-start_time} секунд")
+    return wrapper
+@timer
+def fibonacci():
+    fib1 = fib2 = 1
+    for i in range(2, 200):
+        fib1, fib2 = fib2, fib1 + fib2
+        print(f"Фибоначчи= {fib2}")
+if __name__ == '__main__':
+    fibonacci()
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_8/pic/1.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_10/pic/2.png)
 
 ## Самостоятельная работа №2
-### Самостоятельно создайте атрибуты и методы для ранее созданного класса. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
+### Посмотрев на Вовочку, вы также загорелись идеей спортивного программирования, начав тренировки вы узнали, что для решения некоторых задач необходимо считывать данные из файлов. Но через некоторое время вы столкнулись с проблемой что файлы бывают пустыми, и вы не получаете вводные данные для решения задачи. После этого вы решили не просто считывать данные из файла, а всю конструкцию оборачивать в исключения, чтобы избежать такой проблемы. Создайте пустой файл и файл, в котором есть какая-то информация. Напишите код программы. Если файл пустой, то, нужно вызвать исключение (“бросить исключение”) и вывести в консоль “файл пустой”, а если он не пустой, то вывести информацию из файла.
 ```python
-class Book():
-    def __init__(self, title, author, pages):
-        self.title = title
-        self.author = author
-        self.pages = pages
-    def getFullName(self): return f"{self.title} {self.author}"
-    def toString(self): return f"Title ={self.title} Author={self.author} Pages={self.pages}"
-book = Book("The Lord of the Rings", "J.R.R. Tolkien", 1207)
-print(book.getFullName())
-print(book.toString())
+def read_file_content(filename):
+    try:
+        with open(filename, 'r') as file:
+            content = file.read().strip()
+            if not content:
+                raise ValueError("файл пустой")
+            return content
+    except FileNotFoundError:
+        print(f"Файл {filename} не найден.")
+    except ValueError as e:
+        print(e)
+with open('text.txt', 'w') as file:
+    pass
+with open('text2.txt', 'w') as file:
+    file.write("Всем привет!!!")
+print(read_file_content('text.txt'))
+print(read_file_content('text2.txt'))
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_8/pic/2.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_10/pic/3.png)
 
 ## Самостоятельная работа №3
-### Самостоятельно реализуйте наследование, продолжая работать с ранее созданным классом. Оно должно отличаться, от того, что указано в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
+### Напишите функцию, которая будет складывать 2 и введенное пользователем число, но если пользователь введет строку или другой неподходящий тип данных, то в консоль выведется ошибка “Неподходящий тип данных. Ожидалось число.”. Реализовать функционал программы необходимо через try/except и подобрать правильный тип исключения. Создавать собственное исключение нельзя. Проведите несколько тестов, в которых исключение вызывается и нет. Результатом выполнения задачи будет листинг кода и получившийся вывод в консоль.
 ```python
-class Book():
-    def __init__(self, title, author, pages):
-        self.title = title
-        self.author = author
-        self.pages = pages
-    def getFullName(self): return f"{self.title} {self.author}"
-    def toString(self): return f"Title ={self.title} Author={self.author} Pages={self.pages}"
-class Numbers(Book):
-    def __init__(self, title, author, pages, books_number):
-        super().__init__(title, author, pages)
-        self.books_number = books_number
-book = Numbers("The Lord of the Rings", "J.R.R. Tolkien", 1207, 10001)
-print(book.getFullName())
-print(book.toString())
-print(book.books_number)
+def add_two_Input():
+    try:
+        personNumber = int(input("Введите число: "))
+        print(f"Результат сложения: 2 + {personNumber} = {2 + personNumber}")
+    except ValueError:
+        print("Неподходящий тип данных. Ожидалось число.")
+add_two_Input()
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_8/pic/3.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_10/pic/4.png)
 
 ## Самостоятельная работа №4
-### Самостоятельно реализуйте инкапсуляцию, продолжая работать с ранее созданным классом. Она должна отличаться, от того, что указана в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
+### Создайте собственный декоратор, который будет использоваться для двух любых вами придуманных функций. Декораторы, которые использовались ранее в работе нельзя воссоздавать. Результатом выполнения задачи будет: класс декоратора, две как-то связанными с ним функциями, скриншот консоли с выполненной программой и подробные комментарии, которые будут описывать работу вашего кода.
 ```python
-class Book:
-    def __init__(self, title, author, pages):
-        self._title = title
-        self._author = author
-        self._pages = pages
-    def get_full_name(self):
-        return f"{self._title} {self._author}"
-    def __str__(self):
-        return f"Title: {self._title}, Author: {self._author}, Pages: {self._pages}"
-class Numbers(Book):
-    def __init__(self, title, author, pages, books_number):
-        super().__init__(title, author, pages)
-        self._books_number = books_number
-    def get_books_number(self):
-        return self._books_number
-book = Numbers("The Lord of the Rings", "J.R.R. Tolkien", 1207, 10001)
-print(book.get_full_name())
-print(book)
-print(book.get_books_number())
+class CacheResult:
+    def __init__(self, func):
+        self.func = func
+        self.cache = {}
+    def __call__(self, *args):
+        if args not in self.cache:
+            self.cache[args] = self.func(*args)
+        return self.cache[args]
+@CacheResult
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+print(fibonacci(10))  # Вычисление
+print(fibonacci(10))  # Из кэша
+print(fibonacci(5))   # Вычисление
+print(fibonacci(5))   # Из кэша
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_8/pic/4.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_10/pic/5.png)
 
 ## Самостоятельная работа №5
-### Самостоятельно реализуйте полиморфизм. Он должен отличаться, от того, что указан в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
+### Создайте собственное исключение, которое будет использоваться в двух любых фрагментах кода. Исключения, которые использовались ранее в работе нельзя воссоздавать. Результатом выполнения задачи будет: класс исключения, код к котором в двух местах используется это исключение, скриншот консоли с выполненной программой и подробные комментарии, которые будут описывать работу вашего кода.
 ```python
-class Book:
-    def __init__(self, title, author, pages):
-        self._title = title
-        self._author = author
-        self._pages = pages
-    def get_full_name(self):
-        return f"{self._title} {self._author}"
-    def __str__(self):
-        return f"Title: {self._title}, Author: {self._author}, Pages: {self._pages}"
-    def read(self):
-        return "Шуршит страницами..."
-class Numbers(Book):
-    def __init__(self, title, author, pages, books_number):
-        super().__init__(title, author, pages)
-        self._books_number = books_number
-    def get_books_number(self):
-        return self._books_number
-class Ebook(Book):
-    def __init__(self, title, author, pages, format):
-        super().__init__(title, author, pages)
-        self._format = format
-    def read(self):
-        return f"Открывает файл в формате {self._format}..."
-# Создание объектов разных типов
-physical_book = Book("The Lord of the Rings", "J.R.R. Tolkien", 1207)
-numbered_book = Numbers("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 42, 1)
-ebook = Ebook("Pride and Prejudice", "Jane Austen", 279, "EPUB")
+class NegativeValueError(ValueError):
+    def __init__(self, message="Значение не может быть отрицательным"):
+        super().__init__(message)
+def calculate_square_root(number):
+    if number < 0:
+        raise NegativeValueError
+    return number * 0.5
+def calculate_area(width, height):
+    if width < 0 or height < 0:
+        raise NegativeValueError("Ширина и высота должны быть положительными значениями")
+    return width * height
+# Пример 1:
+try:
+    result = calculate_square_root(-4)
+    print(result)
+except NegativeValueError as e:
+    print(f"Ошибка: {e}")
 
-# Вывод информации о книгах
-print(physical_book.get_full_name())
-print(physical_book)
-print(physical_book.read())
+# Пример 2:
+try:
+    area = calculate_area(5, -2)
+    print(area)
+except NegativeValueError as e:
+    print(f"Ошибка: {e}")
 
-print(numbered_book.get_full_name())
-print(numbered_book)
-print(numbered_book.get_books_number())
-print(numbered_book.read())
-
-print(ebook.get_full_name())
-print(ebook)
-print(ebook.read())
 ```
 ### Результат.
-![Меню](https://github.com/Riko-admin/education/blob/Тема_8/pic/5.png)
+![Меню](https://github.com/Riko-admin/education/blob/Тема_10/pic/6.png)
